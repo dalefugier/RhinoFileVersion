@@ -24,7 +24,7 @@ using Rhino.PlugIns;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Robert McNeel & Associates")]
 [assembly: AssemblyProduct("RhinoFileVersion")]
-[assembly: AssemblyCopyright("Copyright © 2017, Robert McNeel & Associates")]
+[assembly: AssemblyCopyright("Copyright © 2014-17, Robert McNeel & Associates")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
