@@ -11,6 +11,7 @@ using Rhino.PlugIns;
 [assembly: PlugInDescription(DescriptionType.Organization, "Robert McNeel & Associates")]
 [assembly: PlugInDescription(DescriptionType.UpdateUrl, "https://github.com/dalefugier/RhinoFileVersion")]
 [assembly: PlugInDescription(DescriptionType.WebSite, "http://www.rhino3d.com/")]
+[assembly: PlugInDescription(DescriptionType.Icon, "RhinoFileVersion.Resources.RhinoFileVersion.ico")]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -23,7 +24,7 @@ using Rhino.PlugIns;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Robert McNeel & Associates")]
 [assembly: AssemblyProduct("RhinoFileVersion")]
-[assembly: AssemblyCopyright("Copyright © 2014, Robert McNeel & Associates")]
+[assembly: AssemblyCopyright("Copyright © 2017, Robert McNeel & Associates")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -46,8 +47,8 @@ using Rhino.PlugIns;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("5.0.0.0")]
-[assembly: AssemblyFileVersion("5.0.0.0")]
+[assembly: AssemblyVersion("6.0.0.0")]
+[assembly: AssemblyFileVersion("6.0.0.0")]
 
 // Make compatible with Rhino Installer Engine
 [assembly: AssemblyInformationalVersion("2")]
