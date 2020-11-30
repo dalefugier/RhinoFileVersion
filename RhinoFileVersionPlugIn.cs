@@ -66,6 +66,9 @@ namespace RhinoFileVersion
         case 70:
           version = "Rhino 7";
           break;
+        case 80:
+          version = "Rhino 8";
+          break;
         default:
           version = "unknown Rhino";
           break;
