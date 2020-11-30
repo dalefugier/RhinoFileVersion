@@ -1,7 +1,7 @@
 RhinoFileVersion
 ========
 
-Utility plug-in, for Rhinoceros 6, that prints the Rhino file version number to the command line when you open a file.
+Utility plug-in, for Rhino 3D, that prints the Rhino file version number to the command line when you open a file.
 
 Building Sample
 --------------------
