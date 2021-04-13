@@ -100,7 +100,7 @@ namespace RhinoFileVersion
         return rc;
       }
 
-      var rhino_extensions = new string[] { ".3dm", ".3dmbak" };
+      var rhino_extensions = FileExtensions();
       if (!rhino_extensions.Contains(extension))
       {
         if (!quiet)
