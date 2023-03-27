@@ -17,6 +17,7 @@ namespace RhinoFileVersion
     Rhino6,
     Rhino7,
     Rhino8,
+    Rhino9,
     Unknown
   }
 
@@ -42,6 +43,8 @@ namespace RhinoFileVersion
           return "Rhino 7";
         case RhinoVersion.Rhino8:
           return "Rhino 8";
+        case RhinoVersion.Rhino9:
+          return "Rhino 9";
         case RhinoVersion.Unknown:
         default:
           return "unknown Rhino";
@@ -121,28 +124,40 @@ namespace RhinoFileVersion
         switch (archive_version)
         {
           case 1:
+          case 10:
             rc = RhinoVersion.Rhino1;
             break;
           case 2:
+          case 20:
             rc = RhinoVersion.Rhino2;
             break;
           case 3:
+          case 30:
             rc = RhinoVersion.Rhino3;
             break;
           case 4:
+          case 40:
             rc = RhinoVersion.Rhino4;
             break;
+          case 5:
           case 50:
             rc = RhinoVersion.Rhino5;
             break;
+          case 6:
           case 60:
             rc = RhinoVersion.Rhino6;
             break;
+          case 7:
           case 70:
             rc = RhinoVersion.Rhino7;
             break;
+          case 8:
           case 80:
             rc = RhinoVersion.Rhino8;
+            break;
+          case 9:
+          case 90:
+            rc = RhinoVersion.Rhino9;
             break;
           default:
             rc = RhinoVersion.Unknown;
