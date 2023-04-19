@@ -1,9 +1,9 @@
 RhinoFileVersion
 ========
 
-Utility plug-in, for Rhino 3D, that prints the Rhino file version number to the command line when you open a file.
+RhinoFileVersion is utility plug-in that prints the Rhino file version number to the command line when you open a file.
 
-Building Sample
+Building
 --------------------
 To build the sample, you are going to need:
 
