@@ -7,5 +7,5 @@ Building
 --------------------
 To build the sample, you are going to need:
 
-* Rhinoceros 6 (http://www.rhino3d.com)
-* Any version of Microsoft Visual Studio C# that can build .NET 4.5 assemblies.
+* Rhinoceros 8 (http://www.rhino3d.com)
+* Any version of Microsoft Visual Studio C# that can build .NET 7 assemblies.
