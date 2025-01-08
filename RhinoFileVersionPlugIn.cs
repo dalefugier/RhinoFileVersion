@@ -1,8 +1,8 @@
-﻿using System.IO;
-using System.Linq;
-using Rhino;
+﻿using Rhino;
 using Rhino.FileIO;
 using Rhino.PlugIns;
+using System.IO;
+using System.Linq;
 
 namespace RhinoFileVersion
 {
@@ -76,8 +76,8 @@ namespace RhinoFileVersion
     /// </summary>
     protected void OnBeginOpenDocument(object sender, DocumentOpenEventArgs e)
     {
-      var action = e.Merge ? "Importing" : "Opening";
-      var version = FileVersion(e.FileName, true);
+      string action = e.Merge ? "Importing" : "Opening";
+      RhinoVersion version = FileVersion(e.FileName, true);
       if (version != RhinoVersion.Error)
         RhinoApp.Write("\n{0} a {1} format file.\n", action, version.ToFriendlyString());
     }
@@ -89,13 +89,13 @@ namespace RhinoFileVersion
 
     public static RhinoVersion FileVersion(string filename, bool quiet)
     {
-      var rc = RhinoVersion.Error;
+      RhinoVersion rc = RhinoVersion.Error;
 
       filename.Trim(' ', '"');
       if (string.IsNullOrEmpty(filename))
         return rc;
 
-      var extension = Path.GetExtension(filename);
+      string extension = Path.GetExtension(filename);
       if (string.IsNullOrEmpty(extension))
       {
         if (!quiet)
@@ -103,7 +103,7 @@ namespace RhinoFileVersion
         return rc;
       }
 
-      var rhino_extensions = FileExtensions();
+      string[] rhino_extensions = FileExtensions();
       if (!rhino_extensions.Contains(extension))
       {
         if (!quiet)
@@ -119,8 +119,8 @@ namespace RhinoFileVersion
       }
 
       try
-      { 
-        var archive_version = File3dm.ReadArchiveVersion(filename);
+      {
+        int archive_version = File3dm.ReadArchiveVersion(filename);
         switch (archive_version)
         {
           case 1:

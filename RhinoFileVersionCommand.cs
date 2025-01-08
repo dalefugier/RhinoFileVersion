@@ -14,9 +14,9 @@ namespace RhinoFileVersion
       string filename;
       if (mode == RunMode.Interactive)
       {
-        var fd = new Eto.Forms.OpenFileDialog { Title = "Open" };
+        Eto.Forms.OpenFileDialog fd = new Eto.Forms.OpenFileDialog { Title = "Open" };
         fd.Filters.Add(new Eto.Forms.FileFilter("Rhino 3D Models(*.3dm)", RhinoFileVersionPlugIn.FileExtensions()));
-        var rc = fd.ShowDialog(RhinoEtoApp.MainWindow);
+        Eto.Forms.DialogResult rc = fd.ShowDialog(RhinoEtoApp.MainWindow);
         if (rc != Eto.Forms.DialogResult.Ok)
           return Result.Cancel;
 
@@ -24,20 +24,19 @@ namespace RhinoFileVersion
       }
       else
       {
-        var gs = new GetString();
+        GetString gs = new GetString();
         gs.SetCommandPrompt("Name of Rhino file to query");
         gs.Get();
         if (gs.CommandResult() != Result.Success)
           return gs.CommandResult();
 
-        filename = gs.StringResult();
+        filename = gs.StringResult().Trim();
       }
 
-      filename.Trim(' ', '"');
       if (string.IsNullOrEmpty(filename))
         return Result.Nothing;
 
-      var version = RhinoFileVersionPlugIn.FileVersion(filename, false);
+      RhinoVersion version = RhinoFileVersionPlugIn.FileVersion(filename, false);
       if (version == RhinoVersion.Error)
         RhinoApp.WriteLine("Specified file is not a Rhino format file.");
       else
