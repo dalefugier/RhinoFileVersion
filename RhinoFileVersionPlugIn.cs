@@ -103,6 +103,7 @@ namespace RhinoFileVersion
         return rc;
       }
 
+      extension = extension.ToLower();
       string[] rhino_extensions = FileExtensions();
       if (!rhino_extensions.Contains(extension))
       {
